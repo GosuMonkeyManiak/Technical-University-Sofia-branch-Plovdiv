@@ -1,0 +1,49 @@
+# Project: Sixth-Lab
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = 1.o 2.o 3.o 4.o 5.o 6.o 7.o 8.o
+LINKOBJ  = 1.o 2.o 3.o 4.o 5.o 6.o 7.o 8.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = Sixth-Lab.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+1.o: 1.c
+	$(CC) -c 1.c -o 1.o $(CFLAGS)
+
+2.o: 2.c
+	$(CC) -c 2.c -o 2.o $(CFLAGS)
+
+3.o: 3.c
+	$(CC) -c 3.c -o 3.o $(CFLAGS)
+
+4.o: 4.c
+	$(CC) -c 4.c -o 4.o $(CFLAGS)
+
+5.o: 5.c
+	$(CC) -c 5.c -o 5.o $(CFLAGS)
+
+6.o: 6.c
+	$(CC) -c 6.c -o 6.o $(CFLAGS)
+
+7.o: 7.c
+	$(CC) -c 7.c -o 7.o $(CFLAGS)
+
+8.o: 8.c
+	$(CC) -c 8.c -o 8.o $(CFLAGS)

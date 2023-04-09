@@ -367,3 +367,6 @@ Backup of *.doc*
 
 # Visio autosave temporary files
 *.~vsd*
+
+#Ignore all .exe files
+*.exe
